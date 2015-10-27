@@ -1,4 +1,4 @@
-var Orc = function() {
+ var Orc = function() {
   this.health = this.health + 20;
   this.species = "Orc";
   this.allowedClasses = ["Thief", "Berserker", "Assassin"];

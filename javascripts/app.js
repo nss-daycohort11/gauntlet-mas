@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   /*
@@ -120,9 +119,9 @@ $(".player-name-button").click(function() {
 //This is the actual Fight::::::
   $("#attack-btn").click(function(){
     if (this.species === "Human") {
-      Monster.health -= this.damage();
+      Monster.health -= Monster.damage;
     } else {
-      Human.health -= this.damage();
+      Human.health -= Human.damage;
     }
     function Game () {
       monster = new Monster();
