@@ -71,7 +71,6 @@ var Mage = function() {
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
-  this.intelligenceBonus = this.intelligenceBonus + 20;
 };
 Mage.prototype = new PlayerClass();
 
@@ -80,7 +79,6 @@ var Shaman = function() {
   this.name = "Shaman";
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
-  this.intelligenceBonus = this.intelligenceBonus + 20;
 };
 Shaman.prototype = new Mage();
 
@@ -89,7 +87,6 @@ var Wizard = function() {
   this.name = "Wizard";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
-  this.intelligenceBonus = this.intelligenceBonus + 40;
 };
 Wizard.prototype = new Mage();
 
@@ -97,7 +94,6 @@ Wizard.prototype = new Mage();
 var Conjurer = function() {
   this.name = "Conjurer";
   this.strengthBonus = this.strengthBonus - 10;
-  this.intelligenceBonus = this.intelligenceBonus + 10;
 };
 Conjurer.prototype = new Mage();
 
@@ -106,7 +102,6 @@ var Sorcerer = function() {
   this.name = "Sorcerer";
   this.healthBonus = this.healthBonus - 5;
   this.strengthBonus = this.strengthBonus - 20;
-  this.intelligenceBonus = this.intelligenceBonus + 30;
 };
 Sorcerer.prototype = new Mage();
 
