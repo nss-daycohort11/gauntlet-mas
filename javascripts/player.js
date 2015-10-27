@@ -2,7 +2,7 @@
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
  */
-var Player = function(name) {
+var Player = function() {
   this.species = null;
   this.class = null;
   this.weapon = null;
@@ -62,15 +62,17 @@ var Human = function() {
 
   this.species = "Human";
   this.intelligence = this.intelligence + 20;
-
-  this.skinColors.push("brown", "red", "white", "disease");
+  this.skinColors.push("brown", "red", "white", "diseased");
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
+  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk", "Mage", "Shaman", "Wizzard", "Conjurer", "Sorcerer"];
+  this.damage = function () {
+    var damage = Math.floor(Math.random() * 15);
+    return damage;
+  };
+}
 
-  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
-};
-
-
+Human.prototype = new Player()
 
 /*
   Define the base properties for a monster in a 
@@ -80,6 +82,10 @@ var Monster = function() {
   this.health = this.health - 30;
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
+  this.damage = function () {
+    var damage = Math.floor(Math.random() * 25)
+    return damage;
+  }
 };
 
 Monster.prototype = new Player();
