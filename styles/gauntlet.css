@@ -105,20 +105,20 @@ body {
 }
 
 .hero--square {
-  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.joebrucker.com%2Fwp-content%2Fuploads%2F2013%2F07%2Fhero.jpg&f=1");
+  background-image: url("https://images.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fwww.joebrucker.com%2Fwp-content%2Fuploads%2F2013%2F07%2Fhero.jpg&u=http://www.flightattendantjoe.com/wp-content/uploads/2013/07/hero.jpg") no-repeat center center fixed;
   display: inline-block;
-  background-size: cover;
+ /* background-size: cover;
   width: 45%;
-  height: 45%;
+  height: 45%;*/
 }
 
 .enemies--square {
-  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQNSR9F0YTkPPW1lbSZl40ZKYNRGgsSfto14Xux3E3OD2QR4j8QlQ");
+  background-image: url("");
   display: inline-block;
-  background-size: cover;
+  /*background-size: cover;*/
   float: right;
-  width: 45%;
-  height: 45%;
+  /*width: 45%;*/
+  /*height: 45%;*/
 }
 
 
