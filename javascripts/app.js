@@ -1,12 +1,13 @@
+
 $(document).ready(function() {
 
   /*
     Test code to generate a human player and an orc player
    */
-  var warrior = new Human();
-  warrior.setWeapon(new WarAxe());
-  warrior.generateClass();  // This will be used for "Surprise me" option
-  console.log(warrior.toString());
+  var warrior 
+  // warrior.setWeapon(new WarAxe());
+  // warrior.generateClass();  // This will be used for "Surprise me" option
+  // console.log(warrior.toString());
 
   var orc = new Orc();
   orc.generateClass();
@@ -42,6 +43,9 @@ $(document).ready(function() {
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");
         break;
+      case "card--battleground":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
     }
 
     if (moveAlong) {
@@ -59,4 +63,94 @@ $(document).ready(function() {
     $("." + previousCard).show();
   });
 
+  
+  var chosenClass;
+
+  var classRef = {
+    'Warrior': Warrior,
+    'Valkyrie': Valkyrie,
+    'Berserker': Berserker,
+    'Monk': Monk,
+    'Shaman': Shaman,
+    'Wizard': Wizard,
+    'Conjurer': Conjurer,
+    'Sorcerer': Sorcerer,
+    'Thief': Thief,
+    'Ninja': Ninja,
+    'Assassin': Assassin
+  }
+
+  var weaponRef = {
+    'Dagger': Dagger,
+    'Broad Sword': BroadSword,
+    'War Axe': WarAxe
+  }
+  
+//This is on the first page that loads.
+$(".player-name-button").click(function() {
+    var playerNameVariab = $("#player-name").val();
+    console.log(playerNameVariab)
+    Human.prototype = new Player(playerNameVariab);
+    warrior = new Human();
+  });
+
+//This is the click for picking out a warrior
+  $(".class__link").click(function (event) {
+    var currentButtonText = event.currentTarget.childNodes[3].innerHTML;
+    console.log(currentButtonText)
+    warrior.class = new Valkyrie();
+    console.log(warrior);
+  });
+
+  //This is for the weapons
+  $(".weapon__link").click(function (event) {
+    var currentButtonText = event.currentTarget.childNodes[3].innerHTML;
+    warrior.setWeapon(new WarAxe());
+    console.log(warrior)
+  });
+
+  $("#defeatEnemy").click(function(){
+    $(".hero-stats").html(warrior.toString());
+    $(".enemies-stats").html(warrior.toString());
+  });
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

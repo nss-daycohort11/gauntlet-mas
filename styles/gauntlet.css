@@ -103,3 +103,29 @@ body {
   padding: 0 50px 0 20px;
   border-radius: 0 5px 5px 0;
 }
+
+.hero--square {
+  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.joebrucker.com%2Fwp-content%2Fuploads%2F2013%2F07%2Fhero.jpg&f=1");
+  display: inline-block;
+  background-size: cover;
+  width: 45%;
+  height: 45%;
+}
+
+.enemies--square {
+  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQNSR9F0YTkPPW1lbSZl40ZKYNRGgsSfto14Xux3E3OD2QR4j8QlQ");
+  display: inline-block;
+  background-size: cover;
+  float: right;
+  width: 45%;
+  height: 45%;
+}
+
+
+
+
+
+
+
+
+

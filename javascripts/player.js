@@ -69,7 +69,7 @@ var Human = function() {
 
   this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
 };
-Human.prototype = new Player();
+
 
 
 /*
