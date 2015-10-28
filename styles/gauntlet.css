@@ -3,7 +3,10 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 3em;
+  background: url("http://wallpoper.com/images/00/36/84/95/fight-club_00368495.png") no-repeat center center fixed;
+  background-color: black;
 }
+
 
 .field {
   margin: 20px 0 0 0;
@@ -30,6 +33,7 @@ body {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  color: red;
 }
 
 .card__button {
@@ -105,21 +109,43 @@ body {
 }
 
 .hero--square {
-  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.joebrucker.com%2Fwp-content%2Fuploads%2F2013%2F07%2Fhero.jpg&f=1");
+
+  background-image: url("http://vignette4.wikia.nocookie.net/thestudents/images/0/06/Mr_Incredible_transparent.png/revision/latest/scale-to-width-down/272?cb=20141127041823");
   display: inline-block;
   background-size: cover;
-  width: 45%;
-  height: 45%;
+  width: 35%;
+  height: 75%;
+  color: blue;
+  font-weight: 25px;
+  margin-top: 300px;
+}
+
+.hero-stats {
+  width: 35%;
+  height: 75%;
+
 }
 
 .enemies--square {
-  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQNSR9F0YTkPPW1lbSZl40ZKYNRGgsSfto14Xux3E3OD2QR4j8QlQ");
+  background-image: url("http://vignette4.wikia.nocookie.net/the-adventures-of-the-gladiators-of-cybertron/images/e/ea/Dr._Evil.png/revision/latest?cb=20141005115529");
   display: inline-block;
   background-size: cover;
   float: right;
-  width: 45%;
-  height: 45%;
+  width: 35%;
+  height: 75%;
+  color: red;
+  font-weight: 25px;
+  margin-top: 300px;
+
+
 }
+
+.enemies-stats {
+   width: 35%;
+  height: 75%;
+  text-shadow: 10px;
+  
+  }
 
 
 

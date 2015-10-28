@@ -85,7 +85,7 @@ var Monster = function() {
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
   this.damage = function () {
-    var damage = Math.floor(Math.random() * 20)
+    var damage = Math.floor(Math.random() * 27)
     return damage
   };
 };

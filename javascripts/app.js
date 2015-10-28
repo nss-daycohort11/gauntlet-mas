@@ -94,18 +94,32 @@ $(".player-name-button").click(function() {
   $("#defeatEnemy").click(function(){
     $(".hero-stats").html(warrior.toString());
     $(".enemies-stats").html(warrior.toString());
-  
+  })
 
 //This is the actual Fight::::::
   $("#attack-btn").click(function(){
     orc.health -= orc.damage();
     console.log("damage", orc.damage());
     alert("Enemy has " + orc.health + " of health, keep attacking!");
-    warrior.health -= warrior.damage() + warrior.healthBonus;
+    warrior.health -= warrior.damage();
     console.log("warrior damage", warrior.health);
     alert("You have been injured, " + warrior.health + " is the health you have left");
+    
+    if (warrior.health < 0) {
+      alert("You Lost. Try Again Next Time");
+    } if (orc.health < 0) {
+      alert("You win!");
+    };
+
     });
-  });
+  
+    
+      
+      $("#defeatEnemy").click(function(){
+        $(".hero-stats").html(warrior.toString());
+        $(".enemies-stats").html(warrior.toString());
+      })
+});
 
 
 
