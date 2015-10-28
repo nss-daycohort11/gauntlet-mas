@@ -4,7 +4,7 @@ $(document).ready(function() {
   /*
     Test code to generate a human player and an orc player
    */
-  var warrior 
+  var warrior = new Human();
   // // warrior.setWeapon(new WarAxe());
   // // warrior.generateClass();  // This will be used for "Surprise me" option
   // console.log(warrior.toString());
@@ -69,8 +69,9 @@ $(document).ready(function() {
 $(".player-name-button").click(function() {
     var playerNameVariab = $("#player-name").val();
     console.log(playerNameVariab)
-    warrior = new Human();
+    // warrior = new Human();
     warrior.PlayerName = playerNameVariab;
+    console.log(warrior.PlayerName);
   });
 
 //This is the click for picking out a warrior
@@ -98,39 +99,15 @@ $(".player-name-button").click(function() {
 
 //This is the actual Fight::::::
   $("#attack-btn").click(function(){
-    if (this.species === "Human") {
-      Monster.health -= Monster.damage();
-    } else {
-      Human.health -= Human.damage();
-    }
-    function Game () {
-      monster = new Monster();
-      human = new Human();
-      
-      this.turn = 0;
-       
-      this.healthReport = function () {
-        record("Human health: " + player.health + " Monster health: " + monster.health, "report")
-      }
-      
-      this.gameOver = function () {
-        record("GAME OVER", "over")
-        game = null;
-      }
-      
-
-      this.startTurn = function () {
-        
-        human.attack();
-        monster.attack();
-        
-        this.healthReport();
-        
-      }
-
-    };
+    orc.health -= orc.damage();
+    console.log("damage", orc.damage());
+    alert("Enemy has " + orc.health + " of health, keep attacking!");
+    warrior.health -= warrior.damage() + warrior.healthBonus;
+    console.log("warrior damage", warrior.health);
+    alert("You have been injured, " + warrior.health + " is the health you have left");
+    });
   });
-});
+
 
 
 
