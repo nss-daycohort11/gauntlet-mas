@@ -93,9 +93,8 @@ $(".player-name-button").click(function() {
 
   $("#defeatEnemy").click(function(){
     $(".hero-stats").html(warrior.toString());
-    $(".enemies-stats").html(orc.toString());
-  });
-
+    $(".enemies-stats").html(warrior.toString());
+  
 
 //This is the actual Fight::::::
   $("#attack-btn").click(function(){
